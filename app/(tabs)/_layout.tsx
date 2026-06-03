@@ -1,0 +1,57 @@
+import { View, Text } from 'react-native'
+import React from 'react'
+import { Tabs } from 'expo-router'
+import { Feather, Ionicons } from '@expo/vector-icons'
+// import { COLORS } from 'constants'
+// import { COLORS } from '@/constants'
+
+export default function TabLayout() {
+
+    return (
+        <Tabs
+            screenOptions={{
+                headerShown: false,
+                tabBarActiveTintColor: "#466EFA",
+                tabBarInactiveTintColor: "#8E949A",
+                tabBarShowLabel: false,
+                tabBarStyle: {
+                    backgroundColor: "#fff",
+                    borderTopWidth: 1,
+                    borderTopColor: "#F0F0F0",
+                    // height: 56,
+                    paddingTop: 8
+                }
+            }}
+        >
+            <Tabs.Screen name="index" options={{
+                tabBarIcon: ({ color, focused }) => <Ionicons name={focused ? "home" : "home-outline"} size={26} color={color} />
+            }}
+            />
+            <Tabs.Screen name="location" options={{
+                tabBarIcon: ({ color, focused }) => (
+                    <View className='relative'>
+                        <Ionicons name={focused ? "location" : "location-outline"} size={26} color={color} />
+
+                        {/* {cartItems?.length > 0 && <View className='absolute -top-2 -right-2 bg-accent size-3 rounded-full items-center justify-center'>
+                            <Ionicons name='ellipse' size={6} color='white' />
+                        </View>} */}
+                    </View>
+                )
+            }}
+            />
+            <Tabs.Screen name="scan" options={{
+                tabBarIcon: ({ color, focused }) => <Ionicons name={focused ? "qr-code" : "qr-code-outline"} size={26} color={color} />
+            }}
+            />
+
+            <Tabs.Screen name="analytics" options={{
+                tabBarIcon: ({ color, focused }) => <Ionicons name={focused ? "analytics" : "analytics-outline"} size={26} color={color} />
+            }}
+            />
+            <Tabs.Screen name="profile" options={{
+                tabBarIcon: ({ color, focused }) => <Ionicons name={focused ? "person" : "person-outline"} size={26} color={color} />
+            }}
+            />
+        </Tabs>
+    )
+}
