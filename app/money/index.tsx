@@ -174,9 +174,9 @@ function Confirmation({ onContinue }) {
                             </Text>
                         </View>
                     </View>
-                    <View className="bg-[#4B78FE] h-[26px] w-[26px] rounded-[5px] flex-row items-center justify-center">
-                        <TouchableOpacity className="mt-3 ">
-                            <Ionicons name="chevron-forward-outline" size={18} color="#333333" />
+                    <View className="bg-[#4B78FE]/50 h-[26px] w-[26px] rounded-[5px] flex-row items-center justify-center">
+                        <TouchableOpacity className="">
+                            <Ionicons name="chevron-forward-outline" size={18} color="#FFF" />
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -187,8 +187,8 @@ function Confirmation({ onContinue }) {
                     Transfer Details
                 </Text>
 
-                <View className="bg-[#A4A9AE]/20 h-[201px] rounded-[12px] w-full px-3 py-4 mt-4">
-                    <View className="flex-row h-[45px] border-b border-gray-300 rounded-[5px] items-center justify-between mt-4 mb-8">
+                <View className="bg-[#A4A9AE]/10 min-h-[201px] rounded-[12px] w-full px-3 py-4 mt-4">
+                    <View className="flex-row border-b border-gray-300 pb-2 rounded-[5px] items-center justify-between mt-4 mb-8">
                         <Text className="text-[18px] font-medium text-[#8E949A]">
                             Transfer Amount
                         </Text>
@@ -196,7 +196,7 @@ function Confirmation({ onContinue }) {
                             $250.00
                         </Text>
                     </View>
-                    <View className="flex-row h-[45px] border-b border-gray-300 rounded-[5px] items-center justify-between mt-4 mb-8">
+                    <View className="flex-row border-b border-gray-300 rounded-[5px] pb-2 items-center justify-between mt-4 mb-8">
                         <Text className="text-[18px] font-medium text-[#8E949A]">
                             Transfer Fee
                         </Text>
@@ -204,7 +204,7 @@ function Confirmation({ onContinue }) {
                             $0.00
                         </Text>
                     </View>
-                    <View className="flex-row h-[45px] border-b border-gray-300 rounded-[5px] items-center justify-between mt-4 mb-8">
+                    <View className="flex-row rounded-[5px] items-center justify-between mt-4">
                         <Text className="text-[18px] font-medium text-[#8E949A]">
                             Total
                         </Text>
@@ -259,11 +259,9 @@ function Reconfirmation({ onContinue }) {
                         </Text>
                     </View>
 
-                    <View className="mt-4 ">
-                        <Text className="bg-[#FF6363] text-[16px] font-medium w-[249px] rounded-[10px] text-[#FF6363]">
-                            Transaction status: Pending
-                        </Text>
-                    </View>
+                    <Text className="bg-[#FF6363]/10 text-[16px] mt-4 font-medium w-[249px] text-center py-2 rounded-[10px] text-[#FF6363]">
+                        Transaction status: Pending
+                    </Text>
                     <View className="flex-row h-[45px] w-full px-4 border-b border-gray-300 rounded-[5px] items-center justify-between mt-8">
                         <Text className="text-[18px] font-medium text-[#8E949A]">
                             Card Type
@@ -272,7 +270,7 @@ function Reconfirmation({ onContinue }) {
                             Debit Card
                         </Text>
                     </View>
-                    <View className="flex-row h-[45px] w-full px-4 border-b border-gray-300 rounded-[5px] items-center justify-between mt-8">
+                    <View className="flex-row h-[45px] w-full px-4 rounded-[5px] items-center justify-between mt-8">
                         <Text className="text-[18px] font-medium text-[#8E949A]">
                             Transfer Fee
                         </Text>

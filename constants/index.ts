@@ -50,6 +50,38 @@ export const RECENT_TRANSFERS = [
     { id: 5, name: "Mustapha", icon: require('../assets/images/user.png'), route: "/", amount: "$50.00" },
 ];
 
+
+export const bills = [
+    { id: "internet", name: "Internet Bill", icon: "wifi-outline", color: "#51D7B4" },
+    { id: "electricity", name: "Electricity Bill", icon: "flash-outline", color: "#FF6363" },
+    { id: "water", name: "Water Bill", icon: "water-outline", color: "#456EFE" },
+    { id: "other", name: "Other", icon: "grid-outline", color: "#8E949A" },
+];
+
+
+export const BANk_LISTS = [
+    {
+        id: 1,
+        name: "Byline Bank",
+        icon: require('../assets/images/byline.png')
+    },
+    {
+        id: 2,
+        name: "Shamrack Bank",
+        icon: require('../assets/images/shamrack.png')
+    },
+    {
+        id: 3,
+        name: "M&T Bank",
+        icon: require('../assets/images/mt.png')
+    },
+    {
+        id: 4,
+        name: "Truist Financial",
+        icon: require('../assets/images/trust.png')
+    },
+]
+
 export const getStatusColor = (status: string) => {
     switch (status) {
         case "placed":

@@ -37,13 +37,12 @@ export default function Home() {
         </Text>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} className="-mx-2">
           {Actions.map((cat: any) => (
-              <ActionItem key={cat.id}
-                item={cat} isSelected={false}
-                onPress={() => router.push({
-                  pathname: cat.path,
-                  // params: { category: cat.id === 'all' ? '' : cat.name }
-                })} />
-            ))}
+            <ActionItem key={cat.id}
+              item={cat} isSelected={false}
+              onPress={() => router.push({
+                pathname: cat.path,
+              })} />
+          ))}
         </ScrollView>
       </View>
 
@@ -53,13 +52,13 @@ export default function Home() {
         </Text>
         <ScrollView horizontal showsHorizontalScrollIndicator={false} className="-mx-2">
           {Services.map((cat: any) => (
-              <ServiceItem key={cat.id}
-                item={cat} isSelected={false}
-                onPress={() => router.push({
-                  pathname: "/(tabs)",
-                  // params: { category: cat.id === 'all' ? '' : cat.name }
-                })} />
-            ))}
+            <ServiceItem key={cat.id}
+              item={cat} isSelected={false}
+              onPress={() => router.push({
+                pathname: "/(tabs)",
+                // params: { category: cat.id === 'all' ? '' : cat.name }
+              })} />
+          ))}
         </ScrollView>
       </View>
     </SafeAreaView>
